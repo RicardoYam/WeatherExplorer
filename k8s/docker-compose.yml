@@ -1,0 +1,53 @@
+version: '3.3'
+
+services:
+    mysql:
+        image: mysql:8.0.30
+        container_name: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: "123456"
+            MYSQL_USER: 'shixun'
+            MYSQL_PASS: '123456'
+        ports:
+         - "3306:3306"
+        restart: always
+        volumes:
+         - "./db:/var/lib/mysql"
+         - "./mysql.cnf:/etc/mysql.cnf"
+         - "./init:/docker-entrypoint-initdb.d/"
+        networks: 
+         - mynet
+
+    app:
+      container_name: app
+      restart: always
+      build: ./city-service
+      working_dir: /app
+      volumes:
+       - ./city-service:/app
+       - ~/.m2:/root/.m2
+      ports:
+       - 8080:8080
+      depends_on: 
+       - mysql
+      command: mvn clean spring-boot:run -Dspring-boot.run.profiles=pro
+      networks: 
+       - mynet
+
+    mynginx:
+      container_name: mynginx
+      image: nginx:latest
+      restart: always
+      ports:
+       - 80:80
+      volumes:
+       - ./dist:/var/www
+       - ./nginx/conf.d:/etc/nginx/conf.d
+      networks:
+       - mynet
+      depends_on:
+       - app
+
+networks:
+  mynet:
+    driver: bridge

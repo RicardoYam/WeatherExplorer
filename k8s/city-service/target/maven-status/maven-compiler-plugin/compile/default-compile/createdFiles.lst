@@ -1,0 +1,5 @@
+com/shixun/city/repository/CityRepository.class
+com/shixun/city/CityServiceApplication.class
+com/shixun/city/service/CityService.class
+com/shixun/city/entity/City.class
+com/shixun/city/controller/CityController.class
