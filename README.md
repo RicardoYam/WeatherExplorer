@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Welcome to Weather Explorer! This repository provides a comprehensive solution for exploring and analyzing weather data from various sources. The project features a dynamic and responsive frontend built with Vue.js, supported by a robust backend powered by **Java Spring Boot**. For deployment, it leverages **Google Kubernetes Engine (GKE)** to ensure high availability and scalability, while **Nginx** serves as the reliable web server and reverse proxy, optimizing performance and load handling across various scenarios.
+Welcome to Weather Explorer! This repository provides a comprehensive solution for exploring and analyzing weather data from various sources. The project features a dynamic and responsive frontend built with **Vue.js**, supported by a robust backend powered by **Java Spring Boot**. For deployment, it leverages **Google Kubernetes Engine (GKE)** to ensure high availability and scalability, while **Nginx** serves as the reliable web server and reverse proxy, optimizing performance and load handling across various scenarios.
 
 ## Features
 
