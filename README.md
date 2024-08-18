@@ -68,13 +68,13 @@ Once you have Weather Explorer up and running, you can explore Kubernetes featur
 
 ![listpods](./doc/service.png)
 
-- **Scale** your service
+- **Scale** your service:
 
   `kubectl scale Deployment "YOUR-POD-NAME" --repicas="NUMBER"`
 
 ![listpods](./doc/scale.png)
 
-- **Remove** pods
+- **Remove** pods:
 
   `kubectl delete pod "YOUR-POD-NAME"`
 
