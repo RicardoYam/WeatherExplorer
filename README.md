@@ -58,7 +58,7 @@ Once you have Weather Explorer up and running, you can explore Kubernetes featur
 
 - Verify that your backend is working by running:
 
-​	` kubectl logs "YOUR-POD-NAME"`
+  ` kubectl logs "YOUR-POD-NAME"`
 
 ![listpods](./doc/logs.png)
 
