@@ -12,12 +12,12 @@ spec:
       labels:
         app: app
     spec:
-      containers:/Users/ricardo/Desktop/Shixun_Li_45580352/app-deployment.yaml
+      containers:
         - name: app
           image: ricardo2000/app:2.0
           ports:
             - containerPort: 8080
-          env:   # Setting Enviornmental Variables
+          env: # Setting Environmental Variables
             - name: DB_HOST
               valueFrom:
                 configMapKeyRef:
@@ -53,5 +53,5 @@ spec:
     - protocol: TCP
       port: 8080 # The port that the service is running on in the cluster
       targetPort: 8080 # The port exposed by the service
-  type: ClusterIP # type of the service. gai loadbalancer
+  type: ClusterIP # Type of the service.
 
